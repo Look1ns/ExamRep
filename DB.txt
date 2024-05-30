@@ -1,0 +1,33 @@
+create database dbexam;
+use dbexam;
+
+create table User
+(
+	Id int not null primary key auto_increment,
+    Login text not null,
+    Password text not null,
+    Role text not null
+);
+
+create table TypeUstr
+(
+	Id int not null primary key auto_increment,
+    Name text not null
+);
+
+create table Zakazchik
+(
+	Id int not null primary key auto_increment,
+	Fam text not null,
+    Name text not null,
+    Otch text not null,
+    PhoneNumber text not null
+);
+create table Zayavka
+(
+	Id int not null primary key auto_increment,
+    Number int not null,
+    IdType int not null,
+    Model text not null,
+    Status text not null
+);
